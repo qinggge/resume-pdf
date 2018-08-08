@@ -133,18 +133,6 @@ main .projects .project .project-description{
     margin-left: 16px;
 }
 
-@media screen and (max-width: 800px){
-    main .projects .project{
-        display: block;
-    }
-    main .projects .project .project-preview{
-        width: 100%;
-    }
-    main .projects .project .project-description{
-        width: 100%;
-        margin-left: 0;
-    }
-}
 main .projects .project .project-description h4{
     border-bottom: 1px solid teal;
     padding-bottom: 5px;
@@ -194,4 +182,21 @@ main .exp dl dt{
 }
 main .exp dl dd{
     text-indent: 2em ;
+}
+
+/* 移动端 */
+@media screen and (max-width: 800px){
+    main{
+        margin: 0;
+    }
+    main .projects .project{
+        display: block;
+    }
+    main .projects .project .project-preview{
+        width: 100%;
+    }
+    main .projects .project .project-description{
+        width: 100%;
+        margin-left: 0;
+    }
 }

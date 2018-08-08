@@ -1,10 +1,31 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
-*::before{margin: 0;padding: 0;box-sizing: border-box;}
-*::after{margin: 0;padding: 0;box-sizing: border-box;}
-a{text-decoration: none;}
-body{
+* {
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #00E;
+}
+a:hover{
+    text-decoration-line: underline;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -12,30 +33,165 @@ body{
     text-align: left;
     background-color: #fff;
 }
+ul,li{
+    list-style: none;
+}
 /* iconfont 引用 */
+
 .icon {
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
     margin-right: 8px;
- }
- main{
-     max-width: 800px;
-     margin: 32px auto;
-     background: rgb(233, 228, 228);
-     border: 1px solid grey;
- }
- main section{
-     padding: 24px 32px 32px 32px;
- }
- main section .title{
-     font-size: 26px;
-     padding: 8px 0px 0px;
- }
- main section .description{
-     font-size: 14px;
-     color: teal;
-     margin-bottom: 8px;
-     border-bottom: 1px dashed teal;
- }
+}
+
+main {
+    max-width: 800px;
+    margin: 32px auto;
+    background: rgb(233, 228, 228);
+    border: 1px solid grey;
+    box-shadow: 0 0 10px 1px grey;
+}
+
+main section {
+    padding: 24px 32px 0px 32px;
+}
+main section.link{
+    padding-bottom: 24px;
+}
+main section .title {
+    font-size: 20px;
+    padding: 8px 0px 0px;
+    font-weight: normal;
+}
+
+main section .description {
+    font-size: 14px;
+    color: teal;
+    margin-bottom: 16px;
+    border-bottom: 2px dashed teal;
+    font-style: italic;
+}
+
+
+main .info h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 联系方式 */
+main .commu .contact-list .icon{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: teal;
+}
+
+/* 技能 */
+main .skills dl dt{
+    color: #044D22;
+    font-weight: bold;
+    margin-top: 16px;
+}
+main .skills dl dd{
+    text-indent: 2em;
+    position: relative;
+}
+main .skills dl dd::before{
+    content: '•';
+    position: absolute;
+    left: -20px;
+}
+main .skills dl dd code{
+    padding: 0 5px;
+    color: teal;
+    font-size: 14px;
+    font-family: Menlo, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+}
+
+/* 项目经验 */
+main .projects .project{
+    border-bottom: 1px dashed teal;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+main .projects .project:last-child{
+    border-bottom: none;
+}
+main .projects .project .project-preview{
+    width: 50%;
+}
+main .projects .project .project-preview img{
+    width: 100%;
+}
+main .projects .project .project-description{
+    width: 50%;
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 800px){
+    main .projects .project{
+        display: block;
+    }
+    main .projects .project .project-preview{
+        width: 100%;
+    }
+    main .projects .project .project-description{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+main .projects .project .project-description h4{
+    border-bottom: 1px solid teal;
+    padding-bottom: 5px;
+    margin: 8px 0 4px 0;
+    color: teal;
+}
+main .projects .project .project-description h4 span{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+}
+main .projects .project .project-description .introduction{
+    text-indent: 2em;
+    font-size: 14px;
+}
+main .projects .project .project-description .project-link{
+    display: flex;
+    justify-content: space-around;
+}
+main .projects .project .project-description .skill{
+    padding: 0 8px;
+    font-family: Microsoft Yahei;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+}
+.html{
+    background: #56A36C;
+}
+.css{
+    background: #5E8579;
+}
+.javascript{
+    background: #77C34F;
+}
+.jquery{
+    background: teal;
+}
+.canvas{
+    background: #2E68AA;
+}
+
+/* 工作经历 */
+main .exp dl dt{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+main .exp dl dd{
+    text-indent: 2em ;
+}

@@ -56,7 +56,20 @@ main {
 }
 
 main section {
-    padding: 24px 32px 0px 32px;
+    padding: 16px 32px 0px 32px;
+}
+main section.info::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+main section.info img{
+    width: 125px;
+    float: left;
+    margin-right: 20px;
+}
+main section.info p{
+    line-height: 30px;
 }
 main section.link{
     padding-bottom: 24px;
@@ -81,8 +94,12 @@ main .info h1 {
     font-weight: bold;
 }
 
-/* 联系方式 */
-main .commu .contact-list .icon{
+main .info .contact-list ul li{
+    float: left;
+    width: 250px;
+    line-height: 30px;
+}
+main .info .contact-list .icon{
     width: 24px;
     height: 24px;
     vertical-align: middle;
@@ -182,6 +199,9 @@ main .projects .project .project-description .skill{
 }
 
 /* 工作经历 */
+main .exp{
+    padding-bottom: 16px;
+}
 main .exp dl dt{
     margin-bottom: 8px;
     font-size: 16px;

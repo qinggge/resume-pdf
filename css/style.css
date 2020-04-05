@@ -36,6 +36,12 @@ body {
 ul,li{
     list-style: none;
 }
+code{
+    padding: 0 5px;
+    color: teal;
+    font-size: 14px;
+    font-family: Menlo, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+}
 /* iconfont 引用 */
 
 .icon {
@@ -121,12 +127,6 @@ main .skills dl dd::before{
     position: absolute;
     left: -20px;
 }
-main .skills dl dd code{
-    padding: 0 5px;
-    color: teal;
-    font-size: 14px;
-    font-family: Menlo, "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei", sans-serif;
-}
 
 /* 项目经验 */
 main .projects .project{
@@ -202,9 +202,13 @@ main .projects .project .project-description .skill{
 main .exp{
     padding-bottom: 16px;
 }
-main .exp dl dt{
+main .exp dl{
     margin-bottom: 8px;
+}
+main .exp dl dt{
+    margin-bottom: 4px;
     font-size: 16px;
+    font-weight: bold;
 }
 main .exp dl dd{
     text-indent: 2em ;
